@@ -302,6 +302,62 @@ observer.join()
 ```
 
 
+<h3>Simple JSON read method</h3>
+<p>JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate. These days, JSON is mandatory. This little snippet can read a json file and output its content.</p>
+
+```json
+{
+    "username": "testABC",
+    "password": "testDEF"
+}
+```
+
+```python
+import json
+import sys
+import os
+
+userContent = {}
+current_dir = os.path.dirname(sys.argv[0])
+
+with open(f"{current_dir}/sample-json.json", "r") as json_file:
+    userContent = json.load(json_file)
+    print(userContent["username"])
+    print(userContent["password"])
+```
+
+<h3>Simple JSON write method</h3>
+<p>This little snippet can write a json file and output its content.</p>
+
+```json
+{
+    "username": "testABC",
+    "password": "testDEF"
+}
+```
+
+```python
+import json
+import sys
+import os
+
+userContent = {}
+current_dir = os.path.dirname(sys.argv[0])
+
+userInp = input("Enter your username: ")
+userInp2 = input("Enter your password: ")
+
+userContent["username"] = f"{str(userInp)}"
+userContent["password"] = f"{str(userInp2)}"
+
+
+with open(f"{current_dir}/sample-json.json", "w") as json_file:
+    json.dump(userContent, json_file)
+    print("The new username is: " + str(userContent["username"]))
+    print("The new password is: " + str(userContent["password"]))
+```
+
+
 <h3>Simple API Read Methods</h3>
 <p>Here are some ways to read the API path content with a simple GET method and some extra calls.</p>
 
