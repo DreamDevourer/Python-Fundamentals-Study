@@ -306,8 +306,8 @@ observer.join()
 <p>JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate. These days, JSON is mandatory. This little snippet can read a json file and output its content.</p>
 
 ```json
-// SAMPLE JSON FILE
 {
+    "_comment": "SAMPLE JSON FILE",
     "username": "testABC",
     "password": "testDEF"
 }
@@ -331,8 +331,8 @@ with open(f"{current_dir}/sample-json.json", "r") as json_file:
 <p>This little snippet can write a json file and output its content.</p>
 
 ```json
-// SAMPLE JSON FILE
 {
+    "_comment": "SAMPLE JSON FILE",
     "username": "testABC",
     "password": "testDEF"
 }
