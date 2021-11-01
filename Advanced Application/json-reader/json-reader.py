@@ -18,5 +18,5 @@ userContent["password"] = f"{str(userInp2)}"
 
 with open(f"{current_dir}/sample-json.json", "w") as json_file:
     json.dump(userContent, json_file)
-    print("The new username is: " + str(userContent["username"]))
-    print("The new password is: " + str(userContent["password"]))
+    print(f"The new username is: {str(userContent['username'])}")
+    print(f"The new password is: {str(userContent['password'])}")
