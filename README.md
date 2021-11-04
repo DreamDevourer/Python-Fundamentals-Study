@@ -31,6 +31,7 @@
 <li><a href="#math">Math Scripts</a></li>
 <li><a href="#problemSolving">Problem Solving Scripts</a></li>
 <li><a href="#string">String Based Scripts</a></li>
+<li><a href="#100Days">100 Days Coding Challenge</a></li>
 </ol>
 
 <br>
@@ -61,6 +62,9 @@
 
 <h4 id="string">5. String Based Scripts</h4>
 <p>Simple and direct strings scripts with minimal interaction with the user.</p>
+
+<h4 id="100Days">6. 100 Days Coding Challenge</h4>
+<p>An initiative by Dr. Angela Yu to learn Python by building 100 projects in 100 days. Learning to build websites, games, apps, plus scraping and data science.</p>
 
 ## 💡 Useful Snippets and study pieces
 
