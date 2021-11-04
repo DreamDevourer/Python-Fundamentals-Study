@@ -7,4 +7,4 @@ names = names_string.split(", ")
 # Write your code below this line 👇
 
 randomName = random.choice(names)
-print(f"The choosen one to pay the bill is: {randomName}.")
+print(f"The chosen one to pay the bill is: {randomName}.")
