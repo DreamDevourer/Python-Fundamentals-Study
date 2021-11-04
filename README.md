@@ -34,20 +34,6 @@
 <li><a href="#100Days">100 Days Coding Challenge</a></li>
 </ol>
 
-<br>
-
-|     |     |     |     |     |     |
-| --- | --- | --- | --- | --- | --- |
-| **Advanced Application** | **Conversion Scripts** | **Math Scripts** | **Problem Solving Scripts** | **String Based Scripts** |
-| Password Generator | Ordinal numbers to Roman numbers | Circle Area Calculation | Simple Investment Income Calculator | Basic Input exercise |     |
-| Get Phone Number Details | Time Conversion | Fibonacci Sequence | Bonus percentage and salary calculation | Copy strings to clipboard |     |
-| Web Stock Tracking App | Minutes to Years | Rectangle Area Calculation | Quantity per size calculation | Hide string inside JPG files |     |
-| Website Link Picker | Temperature Conversion | Trapeze Area Calculation | Price by quantity calculation | Reverse String |     |
-|     | Images to WebP |     | Q-min jump arrays |     |     |
-|     | Image metada optimization |     |     |     |     |
-
-<br>
-
 <h4 id="advanced">1. Advanced Applications</h4>
 <p>Advanced scripts related to daily and possible market problems solving, high use of all practical applications on each script.</p>
 
