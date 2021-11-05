@@ -66,3 +66,7 @@ elif userSet == "2":
         print("AI wins")
     elif aiChoice == scissors:
         print("Tie")
+
+else:
+    print("Invalid input")
+    exit()
