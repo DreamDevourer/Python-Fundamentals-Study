@@ -7,7 +7,14 @@
 # 3 + 3 = 6
 # 6 + 4 = 10
 # 10 + 5 = 15
+
 sumTotal = 0
-for number in range(1, 101):
+normalVl = []
+
+for normalCount in range(1, 101):
+    normalVl.append(normalCount)
+
+for number in range(1, len(normalVl)+1):
     sumTotal += number
-    print(sumTotal)
+    # Print just the final result of sumTotal.
+print(f"Carl Gauss method result: {sumTotal}")
