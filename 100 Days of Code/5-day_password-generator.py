@@ -11,36 +11,74 @@ print("Welcome to the PyMasterPassword Generator!")
 nr_letters= int(input("How many letters would you like in your password?\n")) 
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
+nr_randomOrder = input("Would you like your password to be in random order? (y/n)\n").lower()
 
 #Easy Level - Order not randomized:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 
-def generateLetters():
-    global letter
-    letter = ""
-    for lettersNum in range(nr_letters):
-        letter += secrets.choice(letters)
-    generateSymbols()
+def easyMode():
+    def generateLetters():
+        global letter
+        letter = ""
+        for lettersNum in range(nr_letters):
+            letter += secrets.choice(letters)
+        generateSymbols()
 
 
-def generateSymbols():
-    global genSymbols
-    genSymbols = ""
-    for symbolNum in range(nr_symbols):
-        genSymbols += secrets.choice(symbols)
-    generateNumbers()
+    def generateSymbols():
+        global genSymbols
+        genSymbols = ""
+        for symbolNum in range(nr_symbols):
+            genSymbols += secrets.choice(symbols)
+        generateNumbers()
 
-def generateNumbers():
-    global genNumbers
-    genNumbers = ""
-    for numNum in range(nr_numbers):
-        genNumbers += secrets.choice(numbers)
-    resultPassword()
+    def generateNumbers():
+        global genNumbers
+        genNumbers = ""
+        for numNum in range(nr_numbers):
+            genNumbers += secrets.choice(numbers)
+        resultPassword()
 
-def resultPassword():
-    print(f"Your password is: {letter}{genSymbols}{genNumbers}")
+    def resultPassword():
+        print(f"Your password is: {letter}{genSymbols}{genNumbers}")
+
+    generateLetters()
 
 
-generateLetters()
+
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
+
+passwdList = []
+
+
+def hardMode():
+
+    def generateLettersH():
+        global passwdList
+        for lettersNum in range(nr_letters):
+            passwdList += secrets.choice(letters)
+        generateSymbolsH()
+
+    def generateSymbolsH():
+        global passwdList
+        for symbolNum in range(nr_symbols):
+            passwdList += secrets.choice(symbols)
+        generateNumbersH()
+
+    def generateNumbersH():
+        global passwdList
+        for numNum in range(nr_numbers):
+            passwdList += secrets.choice(numbers)
+        resultPasswordH()
+
+    def resultPasswordH():
+        global passwdList
+        print(f"Your password is: {passwdList}")
+
+    generateLettersH()
+
+if nr_randomOrder == "y":
+    hardMode()
+else:
+    easyMode()
