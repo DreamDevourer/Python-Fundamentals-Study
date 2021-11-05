@@ -29,8 +29,6 @@ scissors = '''
 # Write your code below this line 👇
 
 visualSet = {"Rock": rock, "Paper": paper, "Scissors": scissors}
-rulesSet = {"RockWinScissors": True,
-            "PaperWinRock": True, "ScissorsWinPaper": True}
 
 aiChoice = random.choice(list(visualSet.values()))
 
@@ -47,6 +45,7 @@ if userSet == "0":
         print("Tie")
     elif aiChoice == scissors:
         print("Human wins")
+
 elif userSet == "1":
     selectedHuman = visualSet["Paper"]
     print(f"HUMAN:\n{selectedHuman}")
@@ -57,6 +56,7 @@ elif userSet == "1":
         print("Human wins")
     elif aiChoice == scissors:
         print("AI wins")
+
 elif userSet == "2":
     selectedHuman = visualSet["Scissors"]
     print(f"HUMAN:\n{selectedHuman}")
