@@ -103,6 +103,25 @@ for link in linksFinder:
         pass
 ```
 
+
+<h3>Random List</h3>
+<p>Randomization is a must need thing in our code, so this is a quick snippet to random lists.</p>
+
+```python
+import random
+
+sample = ['a', 'b', 'c', 'd', 'e']
+print(random.choice(sample))
+
+# For cryptographically secure random choices (e.g., for generating a passphrase from a wordlist), use secrets.choice():
+
+import secrets
+
+sample = ['battery', 'correct', 'horse', 'staple']
+print(secrets.choice(sample))
+
+```
+
 <h3>Random Dictionary</h3>
 <p>Randomization is a must need thing in our code, so this is a quick snippet to random dictionary.</p>
 
