@@ -54,27 +54,30 @@ passwdList = []
 
 def hardMode():
 
+    global passwdList
+
     def generateLettersH():
         global passwdList
         for lettersNum in range(nr_letters):
-            passwdList += secrets.choice(letters)
+            passwdList += random.choice(letters)
         generateSymbolsH()
 
     def generateSymbolsH():
         global passwdList
         for symbolNum in range(nr_symbols):
-            passwdList += secrets.choice(symbols)
+            passwdList += random.choice(symbols)
         generateNumbersH()
 
     def generateNumbersH():
         global passwdList
         for numNum in range(nr_numbers):
-            passwdList += secrets.choice(numbers)
+            passwdList += random.choice(numbers)
         resultPasswordH()
 
     def resultPasswordH():
         global passwdList
-        print(f"Your password is: {passwdList}")
+        random.shuffle(passwdList)
+        print(f"Your random password is: {passwdList}")
 
     generateLettersH()
 
