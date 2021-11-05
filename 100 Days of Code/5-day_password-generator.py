@@ -1,6 +1,9 @@
 #Password Generator Project
 import random
 import secrets
+import os
+import sys
+
 
 # Character Lists
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -82,6 +85,8 @@ def hardMode():
             randomReadable += eachChar
 
         print(f"Your random password is: {randomReadable}")
+        # copy randomReadable to clipboard
+        os.system(f"echo {randomReadable} | pbcopy")
 
     generateLettersH()
 
