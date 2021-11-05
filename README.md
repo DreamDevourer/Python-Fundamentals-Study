@@ -123,7 +123,7 @@ print(secrets.choice(sample))
 ```
 
 <h3>Random Dictionary</h3>
-<p>Randomization is a must need thing in our code, so this is a quick snippet to random dictionary.</p>
+<p>Randomization is a must need thing in our code, so this is a quick snippet to randomize dictionaries.</p>
 
 ```python
 import random
