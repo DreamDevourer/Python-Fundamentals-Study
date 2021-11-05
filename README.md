@@ -103,6 +103,31 @@ for link in linksFinder:
         pass
 ```
 
+<h3>Random Dictionary</h3>
+<p>Randomization is a must need thing in our code, so this is a quick snippet to random dictionary.</p>
+
+```python
+import random
+
+visualSet = {"Rock": rock, "Paper": paper, "Scissors": scissors}
+aiChoice = random.choice(list(visualSet.values()))
+
+"""All possible ways to randomize:
+
+'d' is the dictionary variable.
+
+A random key:
+random.choice(list(d.keys()))
+
+A random value:
+random.choice(list(d.values()))
+
+A random key and value:
+random.choice(list(d.items()))
+"""
+
+```
+
 <h3>Bytes Encode and Decode</h3>
 <p>Bytes converts an object to an immutable byte-represented object of given size and data, which is useful for writing or reading HEX values inside a file.</p>
 

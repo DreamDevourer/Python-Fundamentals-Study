@@ -29,7 +29,6 @@ scissors = '''
 # Write your code below this line 👇
 
 visualSet = {"Rock": rock, "Paper": paper, "Scissors": scissors}
-
 aiChoice = random.choice(list(visualSet.values()))
 
 print("Welcome to the game.\n0 - Rock\n1 - Paper\n2 - Scissors")
