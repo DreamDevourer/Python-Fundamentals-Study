@@ -44,6 +44,9 @@ def easyMode():
 
     def resultPassword():
         print(f"Your password is: {letter}{genSymbols}{genNumbers}")
+        # copy password to clipboard
+        copyPass = letter+genSymbols+genNumbers
+        os.system(f"echo {copyPass} | pbcopy")
 
     generateLetters()
 
