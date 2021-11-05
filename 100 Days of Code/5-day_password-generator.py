@@ -12,29 +12,33 @@ nr_letters= int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-#Easy Level - Order not randomised:
+#Easy Level - Order not randomized:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 
 def generateLetters():
     global letter
+    letter = ""
     for lettersNum in range(nr_letters):
-        letter = secrets.choice(letters)
-        print(letter, end="")
+        letter += secrets.choice(letters)
+    generateSymbols()
+
+
+def generateSymbols():
+    global genSymbols
+    genSymbols = ""
+    for symbolNum in range(nr_symbols):
+        genSymbols += secrets.choice(symbols)
     generateNumbers()
 
 def generateNumbers():
     global genNumbers
+    genNumbers = ""
     for numNum in range(nr_numbers):
-        genNumbers = secrets.choice(numbers)
-        print(genNumbers, end="")
-    generateSymbols()
+        genNumbers += secrets.choice(numbers)
+    resultPassword()
 
-def generateSymbols():
-    global genSymbols
-    for symbolNum in range(nr_symbols):
-        genSymbols = secrets.choice(symbols)
-        print(genSymbols, end="")
-    print(genSymbols)
+def resultPassword():
+    print(f"Your password is: {letter}{genSymbols}{genNumbers}")
 
 
 generateLetters()
