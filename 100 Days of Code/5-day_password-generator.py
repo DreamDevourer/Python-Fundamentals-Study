@@ -77,7 +77,11 @@ def hardMode():
     def resultPasswordH():
         global passwdList
         random.shuffle(passwdList)
-        print(f"Your random password is: {passwdList}")
+        randomReadable = ""
+        for eachChar in passwdList:
+            randomReadable += eachChar
+
+        print(f"Your random password is: {randomReadable}")
 
     generateLettersH()
 
