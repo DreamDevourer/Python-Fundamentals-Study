@@ -172,6 +172,14 @@ random.choice(list(d.items()))
 """
 
 ```
+<h3>Unix Administrative Request</h3>
+<p>If the script needs root user privileges then we need to use this snippet to call sudo.</p>
+
+```python
+import subprocess
+
+rootNeeded = subprocess.call(["/usr/bin/sudo", "/usr/bin/id"])
+```
 
 <h3>Bytes Encode and Decode</h3>
 <p>Bytes converts an object to an immutable byte-represented object of given size and data, which is useful for writing or reading HEX values inside a file.</p>
