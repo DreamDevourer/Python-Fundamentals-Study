@@ -72,6 +72,32 @@ def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
 ```
 
+OR
+
+```python
+import pathlib
+import shutil
+from pathlib import Path
+
+# Dynamic File Path Solution
+THIS_PATH = pathlib.Path(__file__).parent.absolute()
+ASSETS_PATH = THIS_PATH / Path("aarch64")
+
+
+def relative_to_assets(path: str) -> Path:
+    return ASSETS_PATH / Path(path)
+
+
+def relative_to_target(path: str) -> Path:
+    return THIS_PATH / Path(path)
+
+
+def copy_and_overwrite(from_path, to_path):
+    if os.path.exists(to_path):
+        shutil.rmtree(to_path)
+    shutil.copytree(from_path, to_path)
+```
+
 <h3>While</h3>
 <p>While can be used to start a script on the core part of it or to use as a logic operator.</p>
 
