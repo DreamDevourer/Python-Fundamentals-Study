@@ -253,6 +253,8 @@ import sys
 
 # Python path. This will pick the current directory where the script is located.
 current_dir = os.path.dirname(sys.argv[0])
+# OR
+current_shell_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Shell path. This will pick "current_dir" and replace any possible empty spaces with "\" and other fixes to be compatible with any unix-like Shell.
 
