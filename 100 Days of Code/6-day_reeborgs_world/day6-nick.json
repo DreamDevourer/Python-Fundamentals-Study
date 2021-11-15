@@ -1,0 +1,1696 @@
+{
+  "walls": {
+    "1,1": [
+      "east"
+    ],
+    "1,2": [
+      "east"
+    ],
+    "1,3": [
+      "north"
+    ],
+    "2,5": [
+      "north"
+    ],
+    "1,5": [
+      "north"
+    ],
+    "3,5": [
+      "north"
+    ],
+    "4,5": [
+      "north"
+    ],
+    "5,5": [
+      "north",
+      "east"
+    ],
+    "2,3": [
+      "north",
+      "east"
+    ],
+    "2,2": [
+      "east"
+    ],
+    "3,2": [
+      "east"
+    ],
+    "5,1": [
+      "east"
+    ],
+    "5,3": [
+      "east",
+      "north"
+    ],
+    "4,4": [
+      "east",
+      "north"
+    ],
+    "4,2": [
+      "east"
+    ],
+    "1,4": [
+      "east"
+    ],
+    "5,2": [
+      "east",
+      "north"
+    ],
+    "3,1": [
+      "north"
+    ]
+  },
+  "small_tiles": false,
+  "rows": 6,
+  "cols": 6,
+  "tiles": {
+    "6,1": [
+      "mud"
+    ],
+    "6,2": [
+      "mud"
+    ],
+    "6,3": [
+      "mud"
+    ],
+    "6,5": [
+      "mud"
+    ],
+    "6,6": [
+      "mud"
+    ],
+    "5,6": [
+      "mud"
+    ],
+    "4,6": [
+      "mud"
+    ],
+    "3,6": [
+      "mud"
+    ],
+    "2,6": [
+      "mud"
+    ],
+    "1,6": [
+      "mud"
+    ],
+    "6,4": [
+      "grass"
+    ],
+    "5,4": [
+      "#000000"
+    ],
+    "5,5": [
+      "#000000"
+    ],
+    "4,5": [
+      "#000000"
+    ],
+    "3,5": [
+      "#000000"
+    ],
+    "3,4": [
+      "#000000"
+    ],
+    "4,4": [
+      "#000000"
+    ],
+    "4,3": [
+      "#000000"
+    ],
+    "3,3": [
+      "#000000"
+    ],
+    "3,2": [
+      "#000000"
+    ],
+    "4,2": [
+      "#000000"
+    ],
+    "5,3": [
+      "#000000"
+    ],
+    "5,2": [
+      "#000000"
+    ],
+    "5,1": [
+      "#000000"
+    ],
+    "4,1": [
+      "#000000"
+    ],
+    "3,1": [
+      "#000000"
+    ],
+    "2,1": [
+      "#000000"
+    ],
+    "2,2": [
+      "#000000"
+    ],
+    "2,3": [
+      "#000000"
+    ],
+    "2,4": [
+      "#000000"
+    ],
+    "2,5": [
+      "#000000"
+    ],
+    "1,5": [
+      "#000000"
+    ],
+    "1,4": [
+      "#000000"
+    ],
+    "1,3": [
+      "#000000"
+    ],
+    "1,2": [
+      "#000000"
+    ],
+    "1,1": [
+      "#000000"
+    ]
+  },
+  "goal": {
+    "possible_final_positions": [
+      [
+        6,
+        4
+      ]
+    ],
+    "position": {
+      "image": "racing_flag",
+      "x": 6,
+      "y": 4
+    }
+  },
+  "robots": [
+    {
+      "x": 6,
+      "y": 4,
+      "objects": {},
+      "model": "solar panel",
+      "_orientation": 0,
+      "_is_leaky": true,
+      "_prev_x": 5,
+      "_prev_y": 4,
+      "_prev_orientation": 3,
+      "_trace_history": [
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 70,
+          "x": 60,
+          "prev_y": 80,
+          "y": 80,
+          "grid_x": 1,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 60,
+          "x": 60,
+          "prev_y": 80,
+          "y": 90,
+          "grid_x": 1,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 60,
+          "x": 60,
+          "prev_y": 80,
+          "y": 130,
+          "grid_x": 1,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 60,
+          "x": 60,
+          "prev_y": 120,
+          "y": 130,
+          "grid_x": 1,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 60,
+          "x": 70,
+          "prev_y": 130,
+          "y": 130,
+          "grid_x": 1,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 70,
+          "x": 70,
+          "prev_y": 130,
+          "y": 120,
+          "grid_x": 1,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 70,
+          "x": 70,
+          "prev_y": 130,
+          "y": 80,
+          "grid_x": 1,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 70,
+          "x": 70,
+          "prev_y": 90,
+          "y": 80,
+          "grid_x": 1,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 70,
+          "x": 60,
+          "prev_y": 80,
+          "y": 80,
+          "grid_x": 1,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 60,
+          "x": 60,
+          "prev_y": 80,
+          "y": 90,
+          "grid_x": 1,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 60,
+          "x": 70,
+          "prev_y": 90,
+          "y": 90,
+          "grid_x": 1,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 60,
+          "x": 110,
+          "prev_y": 90,
+          "y": 90,
+          "grid_x": 2,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 100,
+          "x": 110,
+          "prev_y": 90,
+          "y": 90,
+          "grid_x": 2,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 110,
+          "x": 110,
+          "prev_y": 90,
+          "y": 80,
+          "grid_x": 2,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 110,
+          "x": 100,
+          "prev_y": 80,
+          "y": 80,
+          "grid_x": 2,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 100,
+          "x": 100,
+          "prev_y": 80,
+          "y": 90,
+          "grid_x": 2,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 100,
+          "x": 100,
+          "prev_y": 80,
+          "y": 130,
+          "grid_x": 2,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 100,
+          "x": 100,
+          "prev_y": 120,
+          "y": 130,
+          "grid_x": 2,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 100,
+          "x": 110,
+          "prev_y": 130,
+          "y": 130,
+          "grid_x": 2,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 100,
+          "x": 150,
+          "prev_y": 130,
+          "y": 130,
+          "grid_x": 3,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 150,
+          "prev_y": 130,
+          "y": 130,
+          "grid_x": 3,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 150,
+          "x": 150,
+          "prev_y": 130,
+          "y": 120,
+          "grid_x": 3,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 150,
+          "x": 140,
+          "prev_y": 120,
+          "y": 120,
+          "grid_x": 3,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 140,
+          "prev_y": 120,
+          "y": 130,
+          "grid_x": 3,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 140,
+          "prev_y": 120,
+          "y": 170,
+          "grid_x": 3,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 140,
+          "prev_y": 160,
+          "y": 170,
+          "grid_x": 3,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 140,
+          "prev_y": 160,
+          "y": 210,
+          "grid_x": 3,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 140,
+          "prev_y": 200,
+          "y": 210,
+          "grid_x": 3,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 150,
+          "prev_y": 210,
+          "y": 210,
+          "grid_x": 3,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 150,
+          "x": 150,
+          "prev_y": 210,
+          "y": 200,
+          "grid_x": 3,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 150,
+          "x": 150,
+          "prev_y": 210,
+          "y": 160,
+          "grid_x": 3,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 150,
+          "x": 150,
+          "prev_y": 170,
+          "y": 160,
+          "grid_x": 3,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 150,
+          "x": 140,
+          "prev_y": 160,
+          "y": 160,
+          "grid_x": 3,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 140,
+          "prev_y": 160,
+          "y": 170,
+          "grid_x": 3,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 150,
+          "prev_y": 170,
+          "y": 170,
+          "grid_x": 3,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 190,
+          "prev_y": 170,
+          "y": 170,
+          "grid_x": 4,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 190,
+          "prev_y": 170,
+          "y": 170,
+          "grid_x": 4,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 190,
+          "prev_y": 170,
+          "y": 160,
+          "grid_x": 4,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 180,
+          "prev_y": 160,
+          "y": 160,
+          "grid_x": 4,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 180,
+          "prev_y": 160,
+          "y": 170,
+          "grid_x": 4,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 180,
+          "prev_y": 160,
+          "y": 210,
+          "grid_x": 4,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 180,
+          "prev_y": 200,
+          "y": 210,
+          "grid_x": 4,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 180,
+          "prev_y": 200,
+          "y": 250,
+          "grid_x": 4,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 180,
+          "prev_y": 240,
+          "y": 250,
+          "grid_x": 4,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 190,
+          "prev_y": 250,
+          "y": 250,
+          "grid_x": 4,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 190,
+          "prev_y": 250,
+          "y": 240,
+          "grid_x": 4,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 180,
+          "prev_y": 240,
+          "y": 240,
+          "grid_x": 4,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 140,
+          "prev_y": 240,
+          "y": 240,
+          "grid_x": 3,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 150,
+          "x": 140,
+          "prev_y": 240,
+          "y": 240,
+          "grid_x": 3,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 150,
+          "x": 100,
+          "prev_y": 240,
+          "y": 240,
+          "grid_x": 2,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 110,
+          "x": 100,
+          "prev_y": 240,
+          "y": 240,
+          "grid_x": 2,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 100,
+          "x": 100,
+          "prev_y": 240,
+          "y": 250,
+          "grid_x": 2,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 100,
+          "x": 110,
+          "prev_y": 250,
+          "y": 250,
+          "grid_x": 2,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 110,
+          "x": 110,
+          "prev_y": 250,
+          "y": 240,
+          "grid_x": 2,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 110,
+          "x": 110,
+          "prev_y": 250,
+          "y": 200,
+          "grid_x": 2,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 110,
+          "x": 110,
+          "prev_y": 210,
+          "y": 200,
+          "grid_x": 2,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 110,
+          "x": 110,
+          "prev_y": 210,
+          "y": 160,
+          "grid_x": 2,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 110,
+          "x": 110,
+          "prev_y": 170,
+          "y": 160,
+          "grid_x": 2,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 110,
+          "x": 100,
+          "prev_y": 160,
+          "y": 160,
+          "grid_x": 2,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 110,
+          "x": 60,
+          "prev_y": 160,
+          "y": 160,
+          "grid_x": 1,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 70,
+          "x": 60,
+          "prev_y": 160,
+          "y": 160,
+          "grid_x": 1,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 60,
+          "x": 60,
+          "prev_y": 160,
+          "y": 170,
+          "grid_x": 1,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 60,
+          "x": 60,
+          "prev_y": 160,
+          "y": 210,
+          "grid_x": 1,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 60,
+          "x": 60,
+          "prev_y": 200,
+          "y": 210,
+          "grid_x": 1,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 60,
+          "x": 60,
+          "prev_y": 200,
+          "y": 250,
+          "grid_x": 1,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 60,
+          "x": 60,
+          "prev_y": 240,
+          "y": 250,
+          "grid_x": 1,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 60,
+          "x": 70,
+          "prev_y": 250,
+          "y": 250,
+          "grid_x": 1,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 70,
+          "x": 70,
+          "prev_y": 250,
+          "y": 240,
+          "grid_x": 1,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 70,
+          "x": 70,
+          "prev_y": 250,
+          "y": 200,
+          "grid_x": 1,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 70,
+          "x": 70,
+          "prev_y": 210,
+          "y": 200,
+          "grid_x": 1,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 70,
+          "x": 70,
+          "prev_y": 210,
+          "y": 160,
+          "grid_x": 1,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 70,
+          "x": 70,
+          "prev_y": 170,
+          "y": 160,
+          "grid_x": 1,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 70,
+          "x": 60,
+          "prev_y": 160,
+          "y": 160,
+          "grid_x": 1,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 60,
+          "x": 60,
+          "prev_y": 160,
+          "y": 170,
+          "grid_x": 1,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 60,
+          "x": 70,
+          "prev_y": 170,
+          "y": 170,
+          "grid_x": 1,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 60,
+          "x": 110,
+          "prev_y": 170,
+          "y": 170,
+          "grid_x": 2,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 100,
+          "x": 110,
+          "prev_y": 170,
+          "y": 170,
+          "grid_x": 2,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 110,
+          "x": 110,
+          "prev_y": 170,
+          "y": 160,
+          "grid_x": 2,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 110,
+          "x": 100,
+          "prev_y": 160,
+          "y": 160,
+          "grid_x": 2,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 100,
+          "x": 100,
+          "prev_y": 160,
+          "y": 170,
+          "grid_x": 2,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 100,
+          "x": 100,
+          "prev_y": 160,
+          "y": 210,
+          "grid_x": 2,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 100,
+          "x": 100,
+          "prev_y": 200,
+          "y": 210,
+          "grid_x": 2,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 100,
+          "x": 100,
+          "prev_y": 200,
+          "y": 250,
+          "grid_x": 2,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 100,
+          "x": 100,
+          "prev_y": 240,
+          "y": 250,
+          "grid_x": 2,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 100,
+          "x": 110,
+          "prev_y": 250,
+          "y": 250,
+          "grid_x": 2,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 100,
+          "x": 150,
+          "prev_y": 250,
+          "y": 250,
+          "grid_x": 3,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 150,
+          "prev_y": 250,
+          "y": 250,
+          "grid_x": 3,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 190,
+          "prev_y": 250,
+          "y": 250,
+          "grid_x": 4,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 190,
+          "prev_y": 250,
+          "y": 250,
+          "grid_x": 4,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 230,
+          "prev_y": 250,
+          "y": 250,
+          "grid_x": 5,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 220,
+          "x": 230,
+          "prev_y": 250,
+          "y": 250,
+          "grid_x": 5,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 230,
+          "x": 230,
+          "prev_y": 250,
+          "y": 240,
+          "grid_x": 5,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 230,
+          "x": 230,
+          "prev_y": 250,
+          "y": 200,
+          "grid_x": 5,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 230,
+          "x": 230,
+          "prev_y": 210,
+          "y": 200,
+          "grid_x": 5,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 230,
+          "x": 220,
+          "prev_y": 200,
+          "y": 200,
+          "grid_x": 5,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 220,
+          "x": 220,
+          "prev_y": 200,
+          "y": 210,
+          "grid_x": 5,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 220,
+          "x": 220,
+          "prev_y": 200,
+          "y": 250,
+          "grid_x": 5,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 220,
+          "x": 220,
+          "prev_y": 240,
+          "y": 250,
+          "grid_x": 5,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 220,
+          "x": 230,
+          "prev_y": 250,
+          "y": 250,
+          "grid_x": 5,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 230,
+          "x": 230,
+          "prev_y": 250,
+          "y": 240,
+          "grid_x": 5,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 230,
+          "x": 220,
+          "prev_y": 240,
+          "y": 240,
+          "grid_x": 5,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 230,
+          "x": 180,
+          "prev_y": 240,
+          "y": 240,
+          "grid_x": 4,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 180,
+          "prev_y": 240,
+          "y": 240,
+          "grid_x": 4,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 180,
+          "prev_y": 240,
+          "y": 250,
+          "grid_x": 4,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 190,
+          "prev_y": 250,
+          "y": 250,
+          "grid_x": 4,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 190,
+          "prev_y": 250,
+          "y": 240,
+          "grid_x": 4,
+          "grid_y": 1
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 190,
+          "prev_y": 250,
+          "y": 200,
+          "grid_x": 4,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 190,
+          "prev_y": 210,
+          "y": 200,
+          "grid_x": 4,
+          "grid_y": 2
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 190,
+          "prev_y": 210,
+          "y": 160,
+          "grid_x": 4,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 190,
+          "prev_y": 170,
+          "y": 160,
+          "grid_x": 4,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 180,
+          "prev_y": 160,
+          "y": 160,
+          "grid_x": 4,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 180,
+          "prev_y": 160,
+          "y": 170,
+          "grid_x": 4,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 190,
+          "prev_y": 170,
+          "y": 170,
+          "grid_x": 4,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 230,
+          "prev_y": 170,
+          "y": 170,
+          "grid_x": 5,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 220,
+          "x": 230,
+          "prev_y": 170,
+          "y": 170,
+          "grid_x": 5,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 230,
+          "x": 230,
+          "prev_y": 170,
+          "y": 160,
+          "grid_x": 5,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 230,
+          "x": 220,
+          "prev_y": 160,
+          "y": 160,
+          "grid_x": 5,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 230,
+          "x": 180,
+          "prev_y": 160,
+          "y": 160,
+          "grid_x": 4,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 180,
+          "prev_y": 160,
+          "y": 160,
+          "grid_x": 4,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 180,
+          "prev_y": 160,
+          "y": 170,
+          "grid_x": 4,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 190,
+          "prev_y": 170,
+          "y": 170,
+          "grid_x": 4,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 190,
+          "prev_y": 170,
+          "y": 160,
+          "grid_x": 4,
+          "grid_y": 3
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 190,
+          "prev_y": 170,
+          "y": 120,
+          "grid_x": 4,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 190,
+          "prev_y": 130,
+          "y": 120,
+          "grid_x": 4,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 180,
+          "prev_y": 120,
+          "y": 120,
+          "grid_x": 4,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 190,
+          "x": 140,
+          "prev_y": 120,
+          "y": 120,
+          "grid_x": 3,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 150,
+          "x": 140,
+          "prev_y": 120,
+          "y": 120,
+          "grid_x": 3,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 140,
+          "prev_y": 120,
+          "y": 130,
+          "grid_x": 3,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 150,
+          "prev_y": 130,
+          "y": 130,
+          "grid_x": 3,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 150,
+          "x": 150,
+          "prev_y": 130,
+          "y": 120,
+          "grid_x": 3,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 150,
+          "x": 150,
+          "prev_y": 130,
+          "y": 80,
+          "grid_x": 3,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 150,
+          "x": 150,
+          "prev_y": 90,
+          "y": 80,
+          "grid_x": 3,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 150,
+          "x": 140,
+          "prev_y": 80,
+          "y": 80,
+          "grid_x": 3,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 140,
+          "prev_y": 80,
+          "y": 90,
+          "grid_x": 3,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 150,
+          "prev_y": 90,
+          "y": 90,
+          "grid_x": 3,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 140,
+          "x": 190,
+          "prev_y": 90,
+          "y": 90,
+          "grid_x": 4,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 190,
+          "prev_y": 90,
+          "y": 90,
+          "grid_x": 4,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 180,
+          "x": 230,
+          "prev_y": 90,
+          "y": 90,
+          "grid_x": 5,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 220,
+          "x": 230,
+          "prev_y": 90,
+          "y": 90,
+          "grid_x": 5,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 230,
+          "x": 230,
+          "prev_y": 90,
+          "y": 80,
+          "grid_x": 5,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 230,
+          "x": 220,
+          "prev_y": 80,
+          "y": 80,
+          "grid_x": 5,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 220,
+          "x": 220,
+          "prev_y": 80,
+          "y": 90,
+          "grid_x": 5,
+          "grid_y": 5
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 220,
+          "x": 220,
+          "prev_y": 80,
+          "y": 130,
+          "grid_x": 5,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 220,
+          "x": 220,
+          "prev_y": 120,
+          "y": 130,
+          "grid_x": 5,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 220,
+          "x": 230,
+          "prev_y": 130,
+          "y": 130,
+          "grid_x": 5,
+          "grid_y": 4
+        },
+        {
+          "color": "seagreen",
+          "thickness": 2,
+          "prev_x": 220,
+          "x": 270,
+          "prev_y": 130,
+          "y": 130,
+          "grid_x": 6,
+          "grid_y": 4
+        }
+      ],
+      "_trace_style": "default",
+      "_trace_color": "seagreen",
+      "__id": 3,
+      "initial_position": [
+        1,
+        5
+      ]
+    }
+  ],
+  "description": [
+    "",
+    "<h1>Lost in a maze</h1>",
+    "<p>Reeborg was exploring a dark maze and the battery in its flashlight ran out.</p>",
+    "<p>Write a program using an <code>if/elif/else</code> statement so Reeborg can find the exit. ",
+    "The secret is to have Reeborg follow along the right edge of the maze, ",
+    "turning right if it can, going straight ahead if it ",
+    "can’t turn right, or turning left as a last resort.</p>",
+    "<h3>What you need to know</h3>",
+    "<ul><li>The functions <code>move()</code> and <code>turn_left()</code>.</li>",
+    "<li>Either the test <code>front_is_clear()</code> or <code>wall_in_front()</code>,",
+    "<code>right_is_clear()</code> or <code>wall_on_right()</code>, and <code>at_goal()</code>.</li>",
+    "<li>How to use a <code>while</code> loop and <code>if/elif/else</code> statements.</li>",
+    "<li>It might be useful to know how to use the negation of a test (<code>not</code> in Python).</li></ul>",
+    "DIFFICULTY4",
+    ""
+  ],
+  "onload": [
+    "var x, y;",
+    "x = RUR.randint(1, 5);",
+    "y = RUR.randint(1, 5);",
+    "reeborg = new UsedRobot(x, y);",
+    "RUR.set_random_orientation();",
+    ""
+  ]
+}
