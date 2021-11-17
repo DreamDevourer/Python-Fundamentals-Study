@@ -52,6 +52,110 @@
 <h4 id="100Days">6. 100 Days Coding Challenge</h4>
 <p>An initiative by Dr. Angela Yu to learn Python by building 100 projects in 100 days. Learning to build websites, games, apps, plus scraping and data science.</p>
 
+## 🦾 100 Days Coding Challenge Pieces
+
+#### **Day 1** - Band Name Generator
+#### **Day 2** - Tip Calculator
+#### **Day 3** - Interactive Story
+#### **Day 4** - Rock, Paper, Scissors game
+#### **Day 5** - Password Generator
+#### **Day 6** - Reeborg Maze Solution
+#### **Day 7** - Hangman Game
+#### **Day 8** - Caesar Cipher
+#### **Day 9** - Silent/Secret Auction
+#### **Day 10** - Calculator App
+#### **Day 11** - Blackjack Capstone Project
+#### **Day 12** - Guessing Game
+#### **Day 13** - Debugger
+#### **Day 14** - Higher or Lower game
+#### **Day 15** - Coffee machine project
+#### **Day 16** - Object Oriented Programming with Coffee Machine
+#### **Day 17** - Object Oriented Programming with Quiz App
+#### **Day 18** - Turtle and GUI
+#### **Day 19** - Etch a Sketch with Turtle GUI
+#### **Day 20** - Snake Game
+#### **Day 21** - Advanced Snake Game
+#### **Day 22** - Pong Game
+#### **Day 23** - Turtle crossing road Game
+#### **Day 24** - Improved Snake Game
+#### **Day 25** - Work with CSV files with Pandas
+#### **Day 26** - List and Dictionary comprehensions with NATO phonetic alphabet
+#### **Day 27** - Tkinter GUI
+#### **Day 28** - Advanced Tkinter GUI - Pomodoro App
+#### **Day 29** - Tkinter GUI Password Manager
+#### **Day 30** - Password Manager JSON implementation
+#### **Day 31** - Flash card program - Frequency language dictionary
+#### **Day 32** - Send Emails and date/time management
+#### **Day 33** - API endpoints - ISS tracker
+#### **Day 34** - Trivia API to work with Quiz app
+#### **Day 35** - Authentication, SMS sender
+#### **Day 36** - Stock Trading News
+#### **Day 37** - Habit tracking app 
+#### **Day 38** - Exercise tracking app
+#### **Day 39** - Cheap flight finder
+#### **Day 40** - Flight Club app
+#### **Day 41** - Basic Web Development with Python
+#### **Day 42** - Intermediate Web Development with Python
+#### **Day 43** & **Day 44** - Website Development
+#### **Day 45** - Web scraping with BeautifulSoup
+#### **Day 46** - Musical Time Machine
+#### **Day 47** - Automated Amazon price tracker
+#### **Day 48** - Game Playing Bot
+#### **Day 49** - LinkedIn Job Application Automation
+#### **Day 50** - Auto Tinder Swiping Bot
+#### **Day 51** - Twitter compliant bot
+#### **Day 52** - Instagram follower bot
+#### **Day 53** - Web scraping - Data entry job automation
+#### **Day 54** - Web Development with Flask
+#### **Day 55** - Parsing web elements with Flask
+#### **Day 56** - Website Templates
+#### **Day 57** - Jinja with Flask
+#### **Day 58** - Bootstrap
+#### **Day 59** - Blog Capstone
+#### **Day 60** - Web forms and POST with Flask
+#### **Day 61** - Advanced forms with Flask WT-Forms
+#### **Day 62** - Wifi Project
+#### **Day 63** - Database with SQLite
+#### **Day 64** - Top 10 Movies
+#### **Day 65** - Web Design and Development project study
+#### **Day 66** - RESTful API
+#### **Day 67** - Advanced RESTful API
+#### **Day 68** - Authentication with Flask
+#### **Day 69** - Adding users in a database
+#### **Day 70** - Deploy web app with Heroku
+#### **Day 71** - Data exploration with Pandas
+#### **Day 72** - Data visualization with Matplotlib
+#### **Day 73** - Analysis of LEGO database
+#### **Day 74** - Google Trends Data
+#### **Day 75** - Plotly Charts
+#### **Day 76** - Computation with NumPy
+#### **Day 77** - Linear Regression
+#### **Day 78** - Nobel Prize Analysis
+#### **Day 79** - Handwashing
+#### **Day 80** - Predict Houses Prices
+#### **Day 81** - Convert Strings into Morse Code
+#### **Day 82** - Portfolio Project Development
+#### **Day 83** - Professional Portfolio Project
+#### **Day 84** - Watermark adder (GUI)
+#### **Day 85** - Typing speed tester (GUI)
+#### **Day 86** - Game development with Godot
+#### **Day 87** - Cafe and Wifi Website
+#### **Day 88** - Web Todo List
+#### **Day 89** - Text Writing App
+#### **Day 90** - PDF to Audiobook Converter
+#### **Day 91** - Image Colour Palette Generator
+#### **Day 92** - Custom Web Scraper
+#### **Day 93** - Google Dinosaur Game bot
+#### **Day 94** - Space Invaders with Godot
+#### **Day 95** - Landing Page
+#### **Day 96** - Ecommerce website page
+#### **Day 97** - Custom Automation
+#### **Day 98** - Generate random profile pictures
+#### **Day 99** - Youtube channel tracker
+#### **Day 100** - Predict Earnings using Multivariable Regressio
+
+
+
 ## 💡 Useful Snippets and study pieces
 
 <p>Here are some useful snippets to use daily for boosting code efficiency. Every single snippet is coming from a study script that I made from this repository.</p>
