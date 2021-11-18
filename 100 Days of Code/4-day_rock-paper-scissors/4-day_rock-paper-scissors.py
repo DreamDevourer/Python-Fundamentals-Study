@@ -1,4 +1,5 @@
 import random
+import sys
 rock = '''
     _______
 ---'   ____)
@@ -69,4 +70,4 @@ elif userSet == "2":
 
 else:
     print("Invalid input")
-    exit()
+    sys.exit(-1)
