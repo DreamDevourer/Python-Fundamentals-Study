@@ -654,6 +654,74 @@ def createItem(item_id: int, item: Item):
         return inventoryDict[str(item_id)]
 ```
 
+
+<h3>Key Obfuscation</h3>
+<p>Obfuscation is the deliberate act of creating source or machine code that is difficult for humans to understand, this helps to improve security - it is far from being the ultimate security solution but is a thing to use in a non-production environment.</p>
+
+For creating a file with the key and obfuscating it:
+
+```python
+import base64
+import pathlib
+import os
+import re
+from pathlib import Path
+
+# Dynamic File Path Solution
+API_PATH = pathlib.Path(__file__).parent.absolute()
+
+
+def relative_to_assets(path: str) -> Path:
+    return API_PATH / Path(path)
+
+userChange = input("Enter key: ").strip()
+
+# Pick userChange and encode it to base64
+userChange = base64.b64encode(userChange.encode('utf-8'))
+# Save userChange to "API" file
+with open(relative_to_assets('Data/security/API'), 'wb') as f:
+    # Delete everything inside the file.
+    f.truncate()
+    f.write(userChange)
+
+    print("DONE! You are ready to use the API!")
+
+```
+
+
+For reading Key from file:
+
+```python
+import base64
+import pathlib
+import os
+import re
+from pathlib import Path
+
+# Dynamic File Path Solution
+API_PATH = pathlib.Path(__file__).parent.absolute()
+
+
+def relative_to_assets(path: str) -> Path:
+    return API_PATH / Path(path)
+
+API_CONTENT = None
+# 🔐 Security execution => READING API FROM FILE
+
+
+def API_SEC():
+    global API_CONTENT
+    # Security measures
+    API_CONTENT = open(relative_to_assets("Data/security/API"), "r").read()
+    API_DECODED = base64.b64decode(API_CONTENT.encode("utf-8"))
+
+    # Regular expression to remove garbage characters, do not remove "-"
+    API_DECODED_CLEAN = re.sub(
+        r"[^A-Za-z0-9-]", "", API_DECODED.decode("utf-8"))
+
+    return API_DECODED_CLEAN
+```
+
 ## 📄 License
 
 Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
