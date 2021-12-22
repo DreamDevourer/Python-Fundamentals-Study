@@ -10,7 +10,7 @@ from pathlib import *
 currentPath = pathlib.Path(__file__).parent.absolute()
 jsonDictionary = open(f"{currentPath}/dictionary.json", "r")
 pyList = jsonDictionary.read()
-print(f"RESULT IS: {pyList['word_list']}")
+print(f"RESULT IS: {pyList}")
 # word_list = json.loads(jsonDictionary)
 word_list = ["null"]
 
