@@ -688,38 +688,109 @@ with open(relative_to_assets('Data/security/API'), 'wb') as f:
 
 ```
 
+<h3>XOR Cipher</h3>
+<p>E</p>
 
-For reading Key from file:
+Encrypting:
 
 ```python
+#! /usr/bin/env python3
 import base64
-import pathlib
 import os
+import pathlib
 import re
 from pathlib import Path
 
 # Dynamic File Path Solution
-API_PATH = pathlib.Path(__file__).parent.absolute()
+KEY_PATH = pathlib.Path(__file__).parent.absolute()
 
 
 def relative_to_assets(path: str) -> Path:
-    return API_PATH / Path(path)
-
-API_CONTENT = None
-# 🔐 Security execution => READING API FROM FILE
+    return KEY_PATH / Path(path)
 
 
-def API_SEC():
-    global API_CONTENT
-    # Security measures
-    API_CONTENT = open(relative_to_assets("Data/security/API"), "r").read()
-    API_DECODED = base64.b64decode(API_CONTENT.encode("utf-8"))
+def encryptSecurity():
+    # Use external script to make base64 or https://www.base64encode.org/
+    key = "MTMy"  # up 255
+    key = base64.b64decode(key)
+    cleanKey = re.sub(
+        r"[^A-Za-z0-9-]", "", key.decode("utf-8"))
+    finalKey = int(cleanKey)
 
-    # Regular expression to remove garbage characters, do not remove "-"
-    API_DECODED_CLEAN = re.sub(
-        r"[^A-Za-z0-9-]", "", API_DECODED.decode("utf-8"))
+    loadEnc00 = open(relative_to_assets("Data/security/.KEY"), "rb")
+    byteReaderData = loadEnc00.read()
+    loadEnc00.close()
 
-    return API_DECODED_CLEAN
+    byteReaderData = bytearray(byteReaderData)
+    for index, value in enumerate(byteReaderData):
+        byteReaderData[index] = value ^ finalKey
+
+    Enc = open(relative_to_assets("Data/security/.KEY.nclmE"), "wb")
+    Enc.write(byteReaderData)
+    Enc.close()
+
+    # Delete Data/security/KEY
+    os.remove(relative_to_assets("Data/security/.KEY"))
+
+
+encryptSecurity()
+
+```
+
+Decrypting:
+
+```python
+#! /usr/bin/env python3
+import base64
+import os
+import pathlib
+import re
+import string
+from pathlib import Path
+import signal
+
+# Dynamic File Path Solution
+KEY_PATH = pathlib.Path(__file__).parent.absolute()
+
+
+def relative_to_assets(path: str) -> Path:
+    return KEY_PATH / Path(path)
+
+
+def signal_handler(sig, frame):
+    # If the program exits then remove important files.
+    os.remove(relative_to_assets("Data/security/.tmp/.KEY"))
+    exit()
+
+
+def decryptSecurity():
+    # Use external script to make base64 or https://www.base64encode.org/
+    key = "MTMy"  # up 255
+    key = base64.b64decode(key)
+    cleanKey = re.sub(
+        r"[^A-Za-z0-9-]", "", key.decode("utf-8"))
+    finalKey = int(cleanKey)
+
+    loadEnc00 = open(relative_to_assets(
+        "Data/security/.KEY.nclmE"), "rb").read()
+
+    byteReader = bytearray(loadEnc00)
+    for index, value in enumerate(byteReader):
+        byteReader[index] = value ^ finalKey
+
+    decEnc = open(relative_to_assets("Data/security/.tmp/.KEY"), "wb")
+    decEnc.write(byteReader)
+
+
+try:
+    # signal handler for "CTRL + C"
+    signal.signal(signal.SIGINT, signal_handler)
+    decryptSecurity()
+    signal.pause()
+except:
+    # In exeption remove important files.
+    os.remove(relative_to_assets("Data/security/.tmp/.KEY"))
+
 ```
 
 ## 📄 License
