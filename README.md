@@ -689,7 +689,7 @@ with open(relative_to_assets('Data/security/API'), 'wb') as f:
 ```
 
 <h3>XOR Cipher</h3>
-<p>E</p>
+<p>XOR Encryption is an encryption method used to encrypt data and is hard to crack by brute-force method, i.e generating random encryption keys to match with the correct one.</p>
 
 Encrypting:
 
