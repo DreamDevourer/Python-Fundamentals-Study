@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
-"""
+""" Nicolas Mendes - Jan 18 2022
+
+Based on https://www.alura.com.br/conteudo/python-validacao-dados#:~:text=Criando%20um%20novo%20Python%20file,contr%C3%A1rio%20o%20retorno%20ser%C3%A1%20False%20
+
 Algorithm for validating CPF
 The CPF calculation is based on the final 2 digits.
 To validate, take the first 9 digits of the CPF, generate the 2 digits and save in a new CPF.
