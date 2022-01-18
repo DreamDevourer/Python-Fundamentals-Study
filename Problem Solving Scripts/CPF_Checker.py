@@ -53,10 +53,6 @@ class CPF_Validator_N:
     def validateCPF(self):
         return self.userCPF
 
-    # if debugMode:
-    #     sampleCPF = "113.314.390-35"
-    #     print(f"Sample CPF for testing: {sampleCPF}")
-    #     userCPF = input("CPF: ")
     validCPF = None
 
     @staticmethod
@@ -84,20 +80,29 @@ class CPF_Validator_N:
 
             #  Get first nine digits from userCPF
             firstNineDigits = userCPFList[0:9]
+
+            # First digit from last section
             sumMaster = 0
             for key, multiply in enumerate(range(len(firstNineDigits) + 1, 1, -1)):
                 # logThis(f"{userCPFList[key]} * {multiply}")
                 sumMaster += int(userCPFList[key]) * multiply
             restSum = 11 - (sumMaster % 11)
 
-            if restSum > 9:
-                restSum = 0
+            # Second Last Digit
+            sumMasterSec = 0
+            for key, multiply in enumerate(range(len(firstNineDigits) + 2, 1, -1)):
+                sumMasterSec += int(userCPFList[key]) * multiply
+            restSumSec = 11 - (sumMasterSec % 11)
 
-            logThis(f"Rest sum: {restSum}")
-            mergeRes = str(userCPF[:9]) + str(restSum)
+            if restSum > 9 or restSumSec > 9:
+                restSum = 0
+                restSumSec = 0
+
+            mergeRes = str(userCPF[:9]) + str(restSum) + str(restSumSec)
             logThis(f"Merged result: {mergeRes}")
 
 
 if __name__ == "__main__":
-    sampleCPF = "113.314.390-35"
+    if debugMode:
+        sampleCPF = "113.314.390-35"
     CPF_Validator_N.validateCPF(sampleCPF)
