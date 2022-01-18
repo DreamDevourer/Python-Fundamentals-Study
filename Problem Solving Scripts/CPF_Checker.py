@@ -132,6 +132,8 @@ class CPF_Validator_N:
             mergeRes = str(userCPF[:9]) + str(restSum) + str(restSumSec)
             logThis(f"Merged result: {mergeRes}")
 
+            return mergeRes
+
 
 if __name__ == "__main__":
     if debugMode:
