@@ -72,16 +72,29 @@ debugMode = False
 
 
 def logThis(message):
+    """
+    This function is used to log messages if debug is enabled.
+    """
     if debugMode:
         print(message)
 
 
 class CPF_Validator_N:
+    """
+    This class is used to validate CPF numbers.
+    """
+
     def __init__(self, userCPF):
+        """
+        This function is used to initialize the class.
+        """
         self.userCPF = userCPF
 
     @property
     def validateCPF(self):
+        """
+        This function is used to return the CPF validation.
+        """
         return self.userCPF
 
     validCPF = None
@@ -89,6 +102,9 @@ class CPF_Validator_N:
     @staticmethod
     # Validates a CPF number with the easy way.
     def validateCPF(userCPF):
+        """
+        This function is used to validate and clean the CPF number.
+        """
         # regular expression to remove any non-numeric characters, spaces, dots or dashes.
         userCPF = re.sub("[^0-9]", "", userCPF)
         logThis(userCPF)
@@ -137,6 +153,9 @@ class CPF_Validator_N:
 
 
 if __name__ == "__main__":
+    """
+    This function is used to run the program.
+    """
     if debugMode:
         sampleCPF = "113.314.390-35"
     CPF_Validator_N.validateCPF(sampleCPF)
