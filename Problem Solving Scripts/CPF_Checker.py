@@ -36,7 +36,7 @@ TO GET FIRST DIGIT FORM LAST SECTION:
 0*2 = 0
 
 TOTAL: 10 + 9 + 24 + 21 + 6 + 20 + 12 + 27 + 0 + 0 = 129
-GET THE REST FROM RESULT => 129 % 11 = 10
+GET THE REST FROM RESULT => 11 - (129 % 11) = 3
 
 IF RESULT > 9, DIGIT IS 0, ELSE DIGIT IS RESULT.
 
@@ -117,6 +117,7 @@ class CPF_Validator_N:
             for key, multiply in enumerate(range(len(firstNineDigits) + 1, 1, -1)):
                 # logThis(f"{userCPFList[key]} * {multiply}")
                 sumMaster += int(userCPFList[key]) * multiply
+                # logThis(sumMaster)
             restSum = 11 - (sumMaster % 11)
 
             # Second Last Digit
