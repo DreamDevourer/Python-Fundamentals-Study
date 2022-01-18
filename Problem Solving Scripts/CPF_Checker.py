@@ -20,6 +20,8 @@ If true, the CPF is valid, otherwise invalid.
 
 SAMPLE CPF: 113.314.390-35
 
+TO GET FIRST DIGIT FORM LAST SECTION:
+
 1*10 = 10
 1*9 = 9
 3*8 = 24
@@ -30,8 +32,33 @@ SAMPLE CPF: 113.314.390-35
 9*3 = 27
 0*2 = 0
 
-DIGITS SUM: 1 + 1 + 3 + 3 + 1 + 4 + 3 + 9 + 0 + 3 + 5 = 33
 TOTAL: 10 + 9 + 24 + 21 + 6 + 20 + 12 + 27 + 0 + 0 = 129
+GET THE REST FROM RESULT => 129 % 11 = 10
+
+IF RESULT > 9, DIGIT IS 0, ELSE DIGIT IS RESULT.
+
+TO GET SECOND DIGIT FORM LAST SECTION:
+
+1*11 = 11
+1*10 = 10
+3*9 = 27
+3*8 = 21
+1*7 = 7
+4*6 = 18
+3*5 = 15
+9*4 = 36
+0*3 = 0
+3*2 = 6
+
+TOTAL: 11 + 10 + 27 + 21 + 7 + 18 + 15 + 36 + 0 + 6 = 151
+GET THE REST FROM RESULT => 151%11 = 5
+
+BONUS:
+
+If the sum pair of all 11 digits are the same, the CPF is invalid.
+
+EXAMPLE:
+DIGITS SUM: 1 + 1 + 3 + 3 + 1 + 4 + 3 + 9 + 0 + 3 + 5 = 33 => Is valid.
 
 """
 
