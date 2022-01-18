@@ -67,7 +67,8 @@ DIGITS SUM: 1 + 1 + 3 + 3 + 1 + 4 + 3 + 9 + 0 + 3 + 5 = 33 => Is valid.
 
 import re
 
-debugMode = True
+# WARNING: Disable in production!
+debugMode = False
 
 
 def logThis(message):
