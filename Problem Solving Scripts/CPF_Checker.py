@@ -149,7 +149,14 @@ class CPF_Validator_N:
             mergeRes = str(userCPF[:9]) + str(restSum) + str(restSumSec)
             logThis(f"Merged result: {mergeRes}")
 
-            return mergeRes
+            if mergeRes == userCPF:
+                logThis("CPF is valid.")
+                validCPF = True
+                return validCPF
+            else:
+                logThis("CPF is NOT valid.")
+                validCPF = False
+                return validCPF
 
 
 if __name__ == "__main__":
