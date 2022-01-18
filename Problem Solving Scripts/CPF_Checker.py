@@ -98,6 +98,7 @@ class CPF_Validator_N:
         return self.userCPF
 
     validCPF = None
+    partiallyValidation = None
 
     @staticmethod
     # Validates a CPF number with the easy way.
@@ -124,6 +125,7 @@ class CPF_Validator_N:
 
             if sumOfDigits[0] == sumOfDigits[1]:
                 logThis("CPF partially valid.")
+                partiallyValidation = True
 
             #  Get first nine digits from userCPF
             firstNineDigits = userCPFList[0:9]
@@ -149,7 +151,7 @@ class CPF_Validator_N:
             mergeRes = str(userCPF[:9]) + str(restSum) + str(restSumSec)
             logThis(f"Merged result: {mergeRes}")
 
-            if mergeRes == userCPF:
+            if mergeRes == userCPF and partiallyValidation == True:
                 logThis("CPF is valid.")
                 validCPF = True
                 return validCPF
