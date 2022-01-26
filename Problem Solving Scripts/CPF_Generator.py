@@ -40,6 +40,18 @@ class CPF_GEN:
         """
         self.generateCPF()
 
+    def getDigits(cpf):
+        lenQty = len(cpf) + 1
+        for cpfIndex, multiplyNum in enumerate(range(lenQty, 1)):
+            cpf = cpf + str(multiplyNum * int(cpf[cpfIndex]))
+        return int(cpf) % 11
+
+    def getDigitOne(cpf: str) -> int:
+        return CPF_GEN.getDigits(cpf[:9])
+
+    def getDigitTwo(cpf: str) -> int:
+        return CPF_GEN.getDigits(cpf[:10])
+
     @staticmethod
     def generateCPF():
         """
@@ -47,26 +59,21 @@ class CPF_GEN:
         """
 
         # Start with random sequence between 0 and 9
-        cpf = [random.randrange(10) for _ in range(9)]
+        nineDigits= "".join([str(random.randint(0, 9)) for x in range(9)])
+        digitOne = CPF_GEN.getDigitOne(nineDigits)
+        digitTwo = CPF_GEN.getDigitTwo(f"{nineDigits}{digitOne}")
+        genCPF = f"{nineDigits}{digitOne}{digitTwo}"
 
-        for _ in range(2):
-            for i, v in enumerate(cpf):
-                res = (len(cpf) + 1 - i) * v
+        formatGenCPF = f"{genCPF[0:3]}.{genCPF[3:6]}.{genCPF[6:9]}-{genCPF[9:11]}"
+        logThis(f"Test formatted: {formatGenCPF}")
 
-            if res > 9:
-                res = 0
-            else:
-                res = 11 - res
-
-            cpf.append(res)
-
-        return "".join(str(x) for x in cpf)
+        return formatGenCPF
 
     def checkCPF():
         if debugMode:
             forceCPF = "113.314.390-35"
 
-        if isThisValid.validateCPF(str(CPF_GEN.generateCPF())) != True:
+        while isThisValid.validateCPF(str(CPF_GEN.generateCPF())) != True:
             CPF_GEN.generateCPF()
             logThis("CPF is invalid, generating another one...")
             # logThis(f"Test Import: {isThisValid.validateCPF(str(CPF_GEN.generateCPF()))}")
