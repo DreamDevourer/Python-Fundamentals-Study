@@ -14,7 +14,7 @@ import re
 import sys
 
 # WARNING: Disable in production!
-debugMode = True
+debugMode = False
 
 
 def logThis(message: str):
