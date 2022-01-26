@@ -70,9 +70,6 @@ class CNPJ_Validator_N:
         userCNPJ = re.sub("[^0-9]", "", userCNPJ)
         logThis(userCNPJ)
 
-        # pick the last 2 digits of userCNPJ.
-        last2digits = userCNPJ[-2:]
-
         # Check length of CNPJ
         if len(userCNPJ) != 14:
             validCNPJ = False
@@ -86,7 +83,7 @@ class CNPJ_Validator_N:
             sumOfDigits = sum(int(i) for i in userCNPJList)
             sumOfDigits = str(sumOfDigits)
 
-            #  Get first nine digits from userCNPJ
+            #  Get first 12 digits from userCNPJ
             firstTwelveDigits = userCNPJList[0:12]
 
             # Let's find the first last digit with this operation.
