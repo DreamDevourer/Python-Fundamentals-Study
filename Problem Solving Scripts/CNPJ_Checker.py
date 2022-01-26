@@ -44,25 +44,18 @@ class CNPJ_Validator_N:
     This class is used to validate CNPJ numbers.
     """
 
-    def __init__(self, userCNPJ):
+    def __init__(self, userCNPJ: str):
         """
         This function is used to initialize the class.
         """
-        self.userCNPJ = userCNPJ
-
-    @property
-    def validateCNPJ(self):
-        """
-        This function is used to return the CNPJ validation.
-        """
-        return self.userCNPJ
+        self.validateCNPJ(userCNPJ)
 
     validCNPJ = None
     partiallyValidation = None
 
     @staticmethod
     # Validates a CNPJ number with the easy way.
-    def validateCNPJ(userCNPJ):
+    def validateCNPJ(userCNPJ: str):
         """
         This function is used to validate and clean the CNPJ number.
         """
