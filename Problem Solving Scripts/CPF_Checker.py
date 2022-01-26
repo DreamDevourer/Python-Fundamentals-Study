@@ -84,25 +84,18 @@ class CPF_Validator_N:
     This class is used to validate CPF numbers.
     """
 
-    def __init__(self, userCPF):
+    def __init__(self, cpf: str):
         """
         This function is used to initialize the class.
         """
-        self.userCPF = userCPF
-
-    @property
-    def validateCPF(self):
-        """
-        This function is used to return the CPF validation.
-        """
-        return self.userCPF
+        self.validateCPF(cpf)
 
     validCPF = None
     partiallyValidation = None
 
     @staticmethod
     # Validates a CPF number with the easy way.
-    def validateCPF(userCPF):
+    def validateCPF(userCPF: str):
         """
         This function is used to validate and clean the CPF number.
         """
@@ -114,7 +107,7 @@ class CPF_Validator_N:
         if len(userCPF) != 11:
             validCPF = False
             logThis("CPF is NOT valid.")
-            return validCPF
+            return False
         else:
 
             # Separate all numbers from userCPF into a list.
@@ -152,13 +145,13 @@ class CPF_Validator_N:
             logThis(f"Merged result: {mergeRes}")
 
             if mergeRes == userCPF and partiallyValidation == True:
-                logThis("CPF is valid.")
                 validCPF = True
-                return validCPF
+                logThis(f"CPF is valid. {validCPF}")
+                return True
             else:
-                logThis("CPF is NOT valid.")
                 validCPF = False
-                return validCPF
+                logThis(f"CPF is NOT valid. {validCPF}")
+                return False
 
 
 if __name__ == "__main__":
@@ -166,5 +159,5 @@ if __name__ == "__main__":
     This function is used to run the program.
     """
     if debugMode:
-        sampleCPF = "113.314.390-35"
+        sampleCPF = "510088499011"
     CPF_Validator_N.validateCPF(sampleCPF)
