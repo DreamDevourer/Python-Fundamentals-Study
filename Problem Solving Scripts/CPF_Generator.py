@@ -27,6 +27,32 @@ def logThis(message):
         print(message)
 
 
+def getDigits(cpf: str):
+    """
+    This function is used to generate the digits.
+    """
+    lenQty = len(cpf) + 1
+    multiOpr = []
+    cpfINT = int(cpf)
+
+    for cpfIndex, multiplyNum in enumerate(range(lenQty, 1)):
+        multiOpr.append(int(cpfINT[cpfIndex]) * multiplyNum)
+        print(f"{cpf[cpfIndex]} * {multiplyNum} = {multiOpr[cpfIndex]}")
+
+    sumRes = sum(multiOpr)
+    finalRes = 11 - (sumRes % 11)
+
+    logThis(f"Final result before: {finalRes}")
+
+    if finalRes > 9:
+        finalRes = 0
+    else:
+        finalRes = finalRes
+
+    logThis(f"Final result: {finalRes}")
+    return finalRes
+
+
 class CPF_GEN:
     """
     This class is used to generate CPF numbers.
@@ -40,17 +66,11 @@ class CPF_GEN:
         """
         self.generateCPF()
 
-    def getDigits(cpf):
-        lenQty = len(cpf) + 1
-        for cpfIndex, multiplyNum in enumerate(range(lenQty, 1)):
-            cpf = cpf + str(multiplyNum * int(cpf[cpfIndex]))
-        return int(cpf) % 11
-
     def getDigitOne(cpf: str) -> int:
-        return CPF_GEN.getDigits(cpf[:9])
+        return getDigits(cpf[:9])
 
     def getDigitTwo(cpf: str) -> int:
-        return CPF_GEN.getDigits(cpf[:10])
+        return getDigits(cpf[:10])
 
     @staticmethod
     def generateCPF():
@@ -59,27 +79,26 @@ class CPF_GEN:
         """
 
         # Start with random sequence between 0 and 9
-        nineDigits= "".join([str(random.randint(0, 9)) for x in range(9)])
+        nineDigits = "".join([str(random.randint(0, 9)) for x in range(9)])
         digitOne = CPF_GEN.getDigitOne(nineDigits)
         digitTwo = CPF_GEN.getDigitTwo(f"{nineDigits}{digitOne}")
-        genCPF = f"{nineDigits}{digitOne}{digitTwo}"
-
+        genCPF = f"{nineDigits}{str(digitOne)}{str(digitTwo)}"
         formatGenCPF = f"{genCPF[0:3]}.{genCPF[3:6]}.{genCPF[6:9]}-{genCPF[9:11]}"
-        logThis(f"Test formatted: {formatGenCPF}")
-
         return formatGenCPF
 
     def checkCPF():
-        if debugMode:
-            forceCPF = "113.314.390-35"
 
-        while isThisValid.validateCPF(str(CPF_GEN.generateCPF())) != True:
-            CPF_GEN.generateCPF()
-            logThis("CPF is invalid, generating another one...")
-            # logThis(f"Test Import: {isThisValid.validateCPF(str(CPF_GEN.generateCPF()))}")
-            return isThisValid.validateCPF(str(CPF_GEN.generateCPF()))
+        if (
+            isThisValid.validateCPF(CPF_GEN.generateCPF()) != True
+            and isThisValid.validateCPF(CPF_GEN.generateCPF()) is not None
+        ):
+            # CPF_GEN.generateCPF()
+            logThis(
+                f"CPF is invalid, generating another one... {CPF_GEN.generateCPF()}"
+            )
+            return None
         else:
-            logThis("CPF is valid!")
+            logThis(f"CPF is valid! {CPF_GEN.generateCPF()}")
             return CPF_GEN.generateCPF()
 
 
@@ -87,6 +106,5 @@ if __name__ == "__main__":
     """
     This function is used to run the program.
     """
-    CPF_GEN.generateCPF()
     # CPF_GEN.checkCPF()
     logThis(CPF_GEN.checkCPF())

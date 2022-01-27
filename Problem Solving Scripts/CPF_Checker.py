@@ -68,7 +68,7 @@ DIGITS SUM: 1 + 1 + 3 + 3 + 1 + 4 + 3 + 9 + 0 + 3 + 5 = 33 => Is valid.
 import re
 
 # WARNING: Disable in production!
-debugMode = False
+debugMode = True
 
 
 def logThis(message):
@@ -91,7 +91,7 @@ class CPF_Validator_N:
         self.validateCPF(cpf)
 
     validCPF = None
-    partiallyValidation = None
+    partiallyValidation = False
 
     @staticmethod
     # Validates a CPF number with the easy way.
@@ -99,6 +99,9 @@ class CPF_Validator_N:
         """
         This function is used to validate and clean the CPF number.
         """
+
+        global partiallyValidation
+
         # regular expression to remove any non-numeric characters, spaces, dots or dashes.
         userCPF = re.sub("[^0-9]", "", userCPF)
         logThis(userCPF)
@@ -117,7 +120,6 @@ class CPF_Validator_N:
             sumOfDigits = str(sumOfDigits)
 
             if sumOfDigits[0] == sumOfDigits[1]:
-                logThis("CPF partially valid.")
                 partiallyValidation = True
 
             #  Get first nine digits from userCPF
@@ -144,20 +146,20 @@ class CPF_Validator_N:
             mergeRes = str(userCPF[:9]) + str(restSum) + str(restSumSec)
             logThis(f"Merged result: {mergeRes}")
 
-            if mergeRes == userCPF and partiallyValidation == True:
-                validCPF = True
-                logThis(f"CPF is valid. {validCPF}")
+            if mergeRes == userCPF:
+                if partiallyValidation == True:
+                    logThis("CPF fully valid.")
+                    return True
                 return True
             else:
-                validCPF = False
-                logThis(f"CPF is NOT valid. {validCPF}")
+                logThis(f"CPF is NOT valid.")
                 return False
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and debugMode == True:
     """
     This function is used to run the program.
     """
     if debugMode:
-        sampleCPF = "510088499011"
+        sampleCPF = "113.314.390-35"
     CPF_Validator_N.validateCPF(sampleCPF)
