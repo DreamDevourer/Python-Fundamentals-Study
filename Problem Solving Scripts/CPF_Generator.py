@@ -60,13 +60,6 @@ class CPF_GEN:
         # Start with random sequence between 0 and 9
         result = "".join(map(str, nineDigits))
         logThis(f"Generated CPF: {result}")
-        # lastFrst = int(result[-1:])
-        # lastSec = int(result[-2:])
-        # result = int(result[0:9])
-
-        # result = str(result) + str(lastFrst) + str(lastSec)
-
-        # logThis(f"Generated FINAL CPF: {result}")
         formatGenCPF = f"{result[0:3]}.{result[3:6]}.{result[6:9]}-{result[9:11]}"
         return formatGenCPF
 
@@ -80,7 +73,6 @@ class CPF_GEN:
             logThis(
                 f"CPF is invalid, generating another one..."
             )
-            # return None
         else:
             logThis(f"CPF is valid! {CPF_GEN.generateCPF()}")
             return CPF_GEN.generateCPF()
