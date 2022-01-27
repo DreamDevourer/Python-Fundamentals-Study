@@ -68,7 +68,7 @@ DIGITS SUM: 1 + 1 + 3 + 3 + 1 + 4 + 3 + 9 + 0 + 3 + 5 = 33 => Is valid.
 import re
 
 # WARNING: Disable in production!
-debugMode = True
+debugMode = False
 
 
 def logThis(message):
@@ -119,9 +119,6 @@ class CPF_Validator_N:
             sumOfDigits = sum(int(i) for i in userCPFList)
             sumOfDigits = str(sumOfDigits)
 
-            if sumOfDigits[0] == sumOfDigits[1]:
-                partiallyValidation = True
-
             #  Get first nine digits from userCPF
             firstNineDigits = userCPFList[0:9]
 
@@ -146,10 +143,7 @@ class CPF_Validator_N:
             mergeRes = str(userCPF[:9]) + str(restSum) + str(restSumSec)
             logThis(f"Merged result: {mergeRes}")
 
-            if mergeRes == userCPF:
-                if partiallyValidation == True:
-                    logThis("CPF fully valid.")
-                    return True
+            if mergeRes == userCPF and sumOfDigits[0] == sumOfDigits[1]:
                 return True
             else:
                 logThis(f"CPF is NOT valid.")
