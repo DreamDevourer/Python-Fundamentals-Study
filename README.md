@@ -793,6 +793,86 @@ except:
 
 ```
 
+<h3>Quick logger</h3>
+<p>Logs provide developers with an extra set of eyes that are constantly looking at the flow that an application is going through.</p>
+
+```python
+
+import os
+import time
+import subprocess
+import pathlib
+from pathlib import Path
+
+currentVersion = "v1.0.5 - Release"
+pid = os.getpid()
+
+LOGS_PATH = OUTPUT_PATH / Path("./logs")
+
+def relative_to_logs(path: str) -> Path:
+    """Return a path relative to the logs folder."""
+    return LOGS_PATH / Path(path)
+
+def get_timestamp():
+    """Return a unix timestamp."""
+    return time.time()
+
+def logRoutine(log: str, timeNeeded: bool = True):
+    """Write strings to the log file and if debug is enabled, print it to console."""
+
+    if timeNeeded is None:
+        timeNeeded = True
+
+    debugMode = False
+    currentTime = time.strftime("%m-%d-%Y -> %H:%M:%S")
+    logHeader = f"""{currentVersion}
+===================================================
+          LOG FILE MADE FOR DEBUG PURPOSES
+      made by Nicolas Mendes - September 2021
+===================================================\n
+"""
+
+    # Check if "ioc.log" exists, if not create this file.
+    if not os.path.exists(relative_to_logs("ioc.log")):
+        open(f"{relative_to_logs('ioc.log')}", "w+")
+        # append logHeader to the file.
+        with open(f"{relative_to_logs('ioc.log')}", "a") as logFile:
+            logFile.write(logHeader)
+
+    # if the first line of ioc.log is different from currentVersion
+    with open(f"{relative_to_logs('ioc.log')}") as checkVer:
+        firstlineVer = checkVer.readline().rstrip()
+        if firstlineVer != currentVersion:
+            # Delete everything inside the file and append logHeader.
+            with open(f"{relative_to_logs('ioc.log')}", "w+") as logFile:
+                logFile.write(logHeader)
+
+    # if the file exceeds 1000 lines, delete everything and append logHeader to the file.
+    with open(f"{relative_to_logs('ioc.log')}", "r") as logFile:
+        if len(logFile.readlines()) > 1000:
+            with open(f"{relative_to_logs('ioc.log')}", "w") as logFile:
+                logFile.write(logHeader)
+
+    # Append the log to the file.
+
+    if timeNeeded == True:
+        with open(f"{relative_to_logs('ioc.log')}", "a") as logFile:
+            logFile.write(f"{currentTime} - {log}\n")
+    else:
+        with open(f"{relative_to_logs('ioc.log')}", "a") as logFile:
+            logFile.write(f"{log}\n")
+
+    if debugMode == True:
+        return print(f"DEBUG LOG: {log}")
+
+logRoutine(
+    f"\n\n[OK] ===> Python loaded. Starting new instance at PID: {pid} | UTS: {get_timestamp()}\n",
+    False,
+)
+
+```
+
+
 ## 📄 License
 
 Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
