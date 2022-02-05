@@ -807,6 +807,7 @@ from pathlib import Path
 currentVersion = "v1.0.5 - Release"
 pid = os.getpid()
 
+OUTPUT_PATH = pathlib.Path(__file__).parent.absolute()
 LOGS_PATH = OUTPUT_PATH / Path("./logs")
 
 def relative_to_logs(path: str) -> Path:
